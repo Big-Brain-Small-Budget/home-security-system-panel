@@ -1,5 +1,5 @@
 {
-    "name": "Home security system",
+    "name": "Home security system PANEL",
     "description": "",
     "dependencies": {
         "core": "*",
