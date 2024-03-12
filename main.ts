@@ -1,6 +1,3 @@
-radio.onReceivedNumber(function (receivedNumber) {
-    basic.showNumber(receivedNumber)
-})
 input.onButtonPressed(Button.A, function () {
     music.play(music.builtinPlayableSoundEffect(soundExpression.happy), music.PlaybackMode.InBackground)
     basic.showString("ARM")
@@ -26,10 +23,8 @@ input.onGesture(Gesture.Shake, function () {
     }
 })
 let lastSignal = 0
-let currentSignal = 0
 let active = 0
 let armed = 0
-radio.setGroup(236)
 let signalOffset = 10
 music.setVolume(255)
 armed = 0
@@ -44,7 +39,7 @@ basic.showLeds(`
     `)
 basic.clearScreen()
 basic.forever(function () {
-    currentSignal = radio.receivedPacket(RadioPacketProperty.SignalStrength)
+    let currentSignal = 0
     if (active) {
         pins.digitalWritePin(DigitalPin.P0, 1)
         music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.PlaybackMode.InBackground)
