@@ -1,3 +1,12 @@
+def on_received_number(receivedNumber):
+    global currentSignal
+    if armed == 0:
+        currentSignal = receivedNumber
+    if armed == 1:
+        if 0 == 0:
+            pass
+radio.on_received_number(on_received_number)
+
 def on_button_pressed_a():
     global armed
     music.play(music.builtin_playable_sound_effect(soundExpression.happy),
@@ -6,12 +15,11 @@ def on_button_pressed_a():
     armed = 1
 input.on_button_pressed(Button.A, on_button_pressed_a)
 
-def on_gesture_tilt_left():
+def activate():
     global armed, active
     if armed == 1:
         armed = 0
         active = 1
-input.on_gesture(Gesture.TILT_LEFT, on_gesture_tilt_left)
 
 def on_button_pressed_ab():
     global active
@@ -20,14 +28,14 @@ def on_button_pressed_ab():
 input.on_button_pressed(Button.AB, on_button_pressed_ab)
 
 def on_button_pressed_b():
-    global armed, active
-    if armed == 1:
-        armed = 0
-        active = 1
+    activate()
 input.on_button_pressed(Button.B, on_button_pressed_b)
 
+currentSignal = 0
 active = 0
 armed = 0
+radio.set_group(241)
+signalOffset = 2
 music.set_volume(255)
 armed = 0
 active = 0

@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "Grove": "github:seeed-studio/pxt-grove#v0.6.0"
     },
     "files": [
         "main.blocks",
