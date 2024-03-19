@@ -1,3 +1,6 @@
+## Disclaimer
+This is not finished! We ran out of time and had to abandon this application. It has been replaced by the other repo. It is only here for reference but you can finish it if you like. 
+It is functional but we couldnt figure out the sensitivty in time
 
 > Open this page at [https://pkatryk1707.github.io/home-security-system/](https://pkatryk1707.github.io/home-security-system/)
 
